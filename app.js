@@ -8,3 +8,6 @@ function reverser(text) {
   }
   alert(`Your reversed text is : ${reversedText}`);
 }
+
+const myText = prompt("Please enter a text of at least two words to reverse : ");
+console.log(reverser(myText));
