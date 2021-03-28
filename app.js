@@ -49,16 +49,33 @@
 
 // 2 Push Method
 
+// function reverseWords(textArray) {
+//   if (textArray.join("").trim().split(" ").length < 2) {
+//     input = textArray;
+//   } else {
+//     textArray = textArray.join("").split(" ");
+//     let reversedTextArray = [];
+//     for (let i = textArray.length - 1; i >= 0; i--) {
+//       reversedTextArray.push(textArray[i]);
+//     }
+//     input = reversedTextArray.join(" ").split("");
+//   }
+// }
+
+
+// 3 Replacing
+
 function reverseWords(textArray) {
   if (textArray.join("").trim().split(" ").length < 2) {
     input = textArray;
   } else {
     textArray = textArray.join("").split(" ");
-    let reversedTextArray = [];
-    for (let i = textArray.length - 1; i >= 0; i--) {
-      reversedTextArray.push(textArray[i]);
+    for (let i = 0, j = textArray.length - 1, k = ""; i < j; i++, j--) {
+      k = textArray[i];
+      textArray[i] = textArray[j];
+      textArray[j] = k;
     }
-    input = reversedTextArray.join(" ").split("");
+    input = textArray.join(" ").split("");
   }
 }
 
