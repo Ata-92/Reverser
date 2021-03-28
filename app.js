@@ -15,25 +15,6 @@
 // console.log(reverser(myText));
 
 
-// Solutions For Tests
-
-
-// String Solution
-
-function reverseWords(textArray) {
-  if (textArray.join("").trim().split(" ").length < 2) {
-    input = textArray;
-  } else {
-    textArray = textArray.join("").split(" ");
-    let reversedText = "";
-    for (let i = textArray.length - 1; i >= 0; i--) {
-      reversedText += textArray[i] + " ";
-    }
-    input = reversedText.trim().split("");
-  }
-}
-
-
 // Tests
 
 let desc = 'Don\'t reverse single word';
