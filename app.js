@@ -1,18 +1,50 @@
 // Prompt Solution
 
-// function reverser(text) {
-//   while (text.trim().split(" ").length < 2) {
-//     text = prompt(`Your text => ${text} <= is a single word.\nPlease enter at least two words :`);
+function reverser(text) {
+  while (text.trim().split(" ").length < 2) {
+    text = prompt(`Your text => ${text} <= is a single word.\nPlease enter at least two words :`);
+  }
+  let reversedText = "";
+  for (let i = text.length - 1; i >= 0; i--) {
+    reversedText += text[i];
+  }
+  alert(`Your reversed text is : ${reversedText}`);
+}
+
+const myText = prompt("Please enter a text of at least two words to reverse : ");
+console.log(reverser(myText));
+
+
+// Solutions For Tests
+
+
+// String Solution
+
+// function reverseWords(textArray) {
+//   if (textArray.join("").trim().split(" ").length < 2) {
+//     input = textArray;
+//   } else {
+//     textArray = textArray.join("").split(" ");
+//     let reversedText = "";
+//     for (let i = textArray.length - 1; i >= 0; i--) {
+//       reversedText += textArray[i] + " ";
+//     }
+//     input = reversedText.trim().split("");
 //   }
-//   let reversedText = "";
-//   for (let i = text.length - 1; i >= 0; i--) {
-//     reversedText += text[i];
-//   }
-//   alert(`Your reversed text is : ${reversedText}`);
 // }
 
-// const myText = prompt("Please enter a text of at least two words to reverse : ");
-// console.log(reverser(myText));
+
+// Array Solutions
+
+// 1 Reverse Method
+
+// function reverseWords(textArray) {
+//   if (textArray.join("").trim().split(" ").length < 2) {
+//     input = textArray;
+//   } else {
+//     input = textArray.join("").split(" ").reverse().join(" ").split("");
+//   }
+// }
 
 
 // Tests
