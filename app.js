@@ -57,40 +57,41 @@
 
 // 3 Replacing
 
-function reverseWords(textArray) {
-  if (textArray.join("").trim().split(" ").length < 2) {
-    input = textArray;
-  } else {
-    textArray = textArray.join("").split(" ");
-    for (let i = 0, j = textArray.length - 1, k = ""; i < j; i++, j--) {
-      k = textArray[i];
-      textArray[i] = textArray[j];
-      textArray[j] = k;
-    }
-    input = textArray.join(" ").split("");
-  }
-}
+// function reverseWords(textArray) {
+//   if (textArray.join("").trim().split(" ").length < 2) {
+//     input = textArray;
+//   } else {
+//     textArray = textArray.join("").split(" ");
+//     for (let i = 0, j = textArray.length - 1, k = ""; i < j; i++, j--) {
+//       k = textArray[i];
+//       textArray[i] = textArray[j];
+//       textArray[j] = k;
+//     }
+//     input = textArray.join(" ").split("");
+//   }
+// }
 
 // Solution Without Reassigning Input
 
-// function reverseWords(message) {
-//   let result = message;
-//   message.reverse();
-//   let xthWord = "";
-//   let counter = 0;
-//   for (let i = 0; i < message.length + 1; i++) {
-//     if (message[i] === " " || i === message.length) {
-//       for (let j = 0; j < xthWord.length; j++) {
-//         result[counter + j] = xthWord[xthWord.length - j - 1];
-//       }
-//       counter = i + 1;
-//       xthWord = "";
-//       continue;
-//     }
-//     xthWord += message[i];
-//   }
-//   return result;
-// }
+function reverseWords(message) {
+  let result = message;
+  message.reverse();
+  console.log(message);
+  let xthWord = "";
+  let counter = 0;
+  for (let i = 0; i < message.length + 1; i++) {
+    if (message[i] === " " || i === message.length) {
+      for (let j = 0; j < xthWord.length; j++) {
+        result[counter + j] = xthWord[xthWord.length - j - 1];
+      }
+      counter = i + 1;
+      xthWord = "";
+      continue;
+    }
+    xthWord += message[i];
+  }
+  return result;
+}
 
 // Tests
 
