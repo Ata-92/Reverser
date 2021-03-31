@@ -19,7 +19,7 @@
 // String Solution
 
 // function reverseWords(textArray) {
-//   textArray = textArray.join("").split(" ");
+//   textArray = textArray.join("").trim().split(" ");
 //   let reversedText = "";
 //   for (let i = textArray.length - 1; i >= 0; i--) {
 //     reversedText += textArray[i] + " ";
@@ -33,13 +33,13 @@
 // 1 Reverse Method
 
 function reverseWords(textArray) {
-  input = textArray.join("").split(" ").reverse().join(" ").split("");
+  input = textArray.join("").trim().split(" ").reverse().join(" ").split("");
 }
 
 // 2 Push Method
 
 // function reverseWords(textArray) {
-//   textArray = textArray.join("").split(" ");
+//   textArray = textArray.join("").trim().split(" ");
 //   let reversedTextArray = [];
 //   for (let i = textArray.length - 1; i >= 0; i--) {
 //     reversedTextArray.push(textArray[i]);
@@ -50,7 +50,7 @@ function reverseWords(textArray) {
 // 3 Replacing
 
 // function reverseWords(textArray) {
-//   textArray = textArray.join("").split(" ");
+//   textArray = textArray.join("").trim().split(" ");
 //   for (let i = 0, j = textArray.length - 1, k = ""; i < j; i++, j--) {
 //     k = textArray[i];
 //     textArray[i] = textArray[j];
